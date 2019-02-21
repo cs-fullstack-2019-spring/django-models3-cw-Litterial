@@ -5,9 +5,9 @@ from django.utils import timezone
 
 class Book(models.Model):  #Book model
     name=models.CharField(max_length=250)
-    pageNumber=models.IntegerField()
+    page=models.IntegerField()
     genre=models.CharField(max_length=30)
-    publishDate=models.DateField(default=timezone.now())
+    publishDate=models.DateField()
 
     def __str__(self):  #names each book to read easier
         return self.name
